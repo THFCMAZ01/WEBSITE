@@ -1,0 +1,296 @@
+/* ====================================
+W3C Compliant Resets & Base Styles 
+   ==================================== */
+* {
+    /* Ensures padding and border are included in the element's total width/height */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; 
+    color: #343a40;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Buttons and Action Elements --- */
+.btn-shop-now, .btn-view-detail, .btn-buy, .btn-checkout, .btn-remove {
+    display: inline-block;
+    background-color: #ffc107; /* Primary action color (Yellow/Gold) */
+    color: #343a40 !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+
+.btn-buy:hover, .btn-shop-now:hover, .btn-checkout:hover {
+    background-color: #e0a800; 
+}
+
+/* ====================================
+   Header & Navigation Styling
+   ==================================== */
+header {
+    background-color: #343a40;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 a {
+    font-size: 1.8em;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* ====================================
+   Homepage (index.html) Styling
+   ==================================== */
+
+/* Background Image Enhancement */
+.hero {
+    /* Example background image implementation for a professional look */
+    background-image: url('images/hero-banner.jpg');
+    background-size: cover; 
+    background-position: center center;
+    /* Uses a semi-transparent dark overlay to ensure text readability */
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: overlay; 
+    
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for impact */
+    margin-bottom: 40px;
+    color: white; /* Ensures text is white against the dark background */
+}
+
+.hero h2, .hero p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+
+.product-listing {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.product-listing h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+.grid {
+    /* Responsive CSS Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+
+/* FIX: Product Card Alignment */
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+
+    /* KEY FIX 1: Use Flexbox to align content vertically */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    /* KEY FIX 2: Set a fixed height for all product images */
+    height: 250px; 
+    /* KEY FIX 3: Ensures images fill the fixed height without distortion */
+    object-fit: cover; 
+    
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #dc3545;
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+
+/* KEY FIX 4: Pushes the button to the bottom of the card */
+.product-card .btn-view-detail {
+    margin-top: auto; 
+}
+
+
+/* ====================================
+   Product Detail (product-detail.html) Styling
+   ==================================== */
+.product-detail-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-gallery, .product-info-panel {
+    flex: 1;
+    padding: 0 25px;
+}
+
+.product-gallery .main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.product-info-panel h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.product-info-panel .price-large {
+    font-size: 2.8em;
+    color: #dc3545;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* ====================================
+   Cart Page (cart.html) Styling
+   ==================================== */
+.cart-view {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.cart-view h2 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.item-details { flex-grow: 1; }
+.item-quantity, .item-total, .btn-remove { padding: 0 15px; text-align: right; }
+
+.item-total { font-weight: bold; color: #dc3545; font-size: 1.2em; }
+.btn-remove {
+    background: none;
+    color: #dc3545 !important;
+    border: 1px solid #dc3545;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.cart-summary {
+    background-color: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-summary .grand-total {
+    font-size: 1.6em;
+    font-weight: bold;
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* ====================================
+   About & Contact Page Styling
+   ==================================== */
+.page-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ====================================
+Footer Styling
+   ==================================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #212529;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: #adb5bd;
+    padding: 0 15px;
+}
+
+.footer-nav ul li a:hover {
+    color: white;
+}
