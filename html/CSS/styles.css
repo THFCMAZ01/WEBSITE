@@ -1,8 +1,4 @@
-/* ====================================
-W3C Compliant Resets & Base Styles 
-   ==================================== */
 * {
-    /* Ensures padding and border are included in the element's total width/height */
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
@@ -20,7 +16,7 @@ a {
     color: inherit;
 }
 
-/* --- Buttons and Action Elements --- */
+
 .btn-shop-now, .btn-view-detail, .btn-buy, .btn-checkout, .btn-remove {
     display: inline-block;
     background-color: #ffc107; /* Primary action color (Yellow/Gold) */
@@ -37,9 +33,7 @@ a {
     background-color: #e0a800; 
 }
 
-/* ====================================
-   Header & Navigation Styling
-   ==================================== */
+
 header {
     background-color: #343a40;
     padding: 20px 40px;
@@ -246,6 +240,31 @@ header h1 a {
     border-top: 2px solid #eee;
     padding-top: 15px;
     margin-top: 15px;
+}
+
+/* ====================================
+   Cart Page (cart.html) Styling - IMAGE FIX
+   ==================================== */
+
+.cart-item img {
+    /* Enforce a small, consistent size for all cart images */
+    width: 80px;  
+    height: 80px; 
+    
+    /* Ensures the image covers the area without distortion */
+    object-fit: cover; 
+    
+    /* Adds a little space between the image and the text details */
+    margin-right: 15px; 
+    
+    border-radius: 4px;
+}
+
+/* You may need to update the .cart-item to include align-items: center if it's not already there */
+.cart-item {
+    display: flex;
+    align-items: center; /* Ensures text and image align nicely in the middle */
+    /* ... other existing styles ... */
 }
 
 /* ====================================
