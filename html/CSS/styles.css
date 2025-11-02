@@ -16,7 +16,7 @@ a {
 .btn-shop-now, .btn-view-detail, .btn-buy, .btn-checkout, .btn-remove {
     display: inline-block;
     background-color: #ffc107;
-    color: #343a40 !important;
+    color: #343a40 ;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
