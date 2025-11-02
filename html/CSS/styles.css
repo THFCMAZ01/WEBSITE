@@ -30,7 +30,7 @@ a {
 }
 .btn-remove {
     background: none;
-    color: #dc3545 !important;
+    color: #dc3545;
     border: 1px solid #dc3545;
     padding: 5px 10px;
     font-size: 0.8em;
